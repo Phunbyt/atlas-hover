@@ -1,0 +1,25 @@
+.activeNav {
+  color: #003a51;
+  border-bottom: 2px solid #003a51;
+}
+.defaultNav {
+  color: #1e1e1e;
+  font-size: 1rem;
+}
+
+.navbar {
+  display: none;
+}
+.hamburger {
+  display: initial;
+}
+
+@media only screen and (min-width: 950px) {
+  /* For desktop: */
+  .navbar {
+    display: initial;
+  }
+  .hamburger {
+    display: none;
+  }
+}

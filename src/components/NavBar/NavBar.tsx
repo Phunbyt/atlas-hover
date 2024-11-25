@@ -1,17 +1,12 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import "./navbar.css";
-
 import { NavLink } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import { ATLASHOVER_LOGO } from "../../assets";
 import CustomButton from "../CustomButton/CustomButton";
-import { appColors } from "../../constants/colors";
-import { Typography } from "@mui/material";
 import LongMenu from "./Menu";
+import "./navbar.css";
 
 function NavBar() {
   const navLinks = [

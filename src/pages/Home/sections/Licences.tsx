@@ -1,5 +1,5 @@
-import { Box, Container } from "@mui/material";
 import React from "react";
+import { Box, Container } from "@mui/material";
 import { SBA_LOGO, VSOB_LOGO } from "../../../assets";
 
 function Licences() {

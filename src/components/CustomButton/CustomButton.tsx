@@ -1,8 +1,7 @@
 import * as React from "react";
-import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import { appColors } from "../../constants/colors";
-import { colors, Typography } from "@mui/material";
+import {  Typography } from "@mui/material";
 
 type CustomButtonType = {
   text: string;

@@ -1,6 +1,4 @@
 import { Box } from "@mui/material";
-import React from "react";
-import { SBA_LOGO } from "../../assets";
 import "./animatedImageCard.css";
 
 function AnimatedImageCard({ imageLink }) {

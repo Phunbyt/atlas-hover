@@ -1,7 +1,6 @@
-import { Avatar, Box, Container, Typography } from "@mui/material";
 import React from "react";
+import {  Box, Container, Typography } from "@mui/material";
 import { appColors } from "../../constants/colors";
-import Grid from "@mui/material/Grid2";
 import { ATLASHOVER_LOGO } from "../../assets";
 import { NavLink, useNavigate } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";

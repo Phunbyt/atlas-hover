@@ -1,5 +1,5 @@
-import { Box, Container, Typography } from "@mui/material";
 import React from "react";
+import { Box, Container, Typography } from "@mui/material";
 import { appColors } from "../../../constants/colors";
 import CustomButton from "../../../components/CustomButton/CustomButton";
 

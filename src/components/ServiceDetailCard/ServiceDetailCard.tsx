@@ -4,9 +4,6 @@ import { appColors } from "../../constants/colors";
 import AnimatedImageCard from "../AnimatedImageCard/AnimatedImageCard";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 function ServiceDetailCard({

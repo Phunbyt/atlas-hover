@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import {
   ICON_1,
-  ICON_10,
   ICON_11,
   ICON_12,
   ICON_13,

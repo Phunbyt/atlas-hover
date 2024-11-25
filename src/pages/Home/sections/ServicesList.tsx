@@ -1,7 +1,5 @@
 import React from "react";
 import { appColors } from "../../../constants/colors";
-import { Height } from "@mui/icons-material";
-import { width } from "@mui/system";
 import ServiceCard from "../../../components/ServiceCard/ServiceCard";
 import CodeIcon from "@mui/icons-material/Code";
 import MemoryIcon from "@mui/icons-material/Memory";

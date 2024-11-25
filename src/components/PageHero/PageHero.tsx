@@ -1,6 +1,5 @@
-import { Box, Container, Typography } from "@mui/material";
 import React from "react";
-import { VR_GIRL } from "../assets";
+import { Box, Container, Typography } from "@mui/material";
 import { appColors } from "../../constants/colors";
 
 function PageHero({ heroImage, height = "45vh", mainText, subText }) {

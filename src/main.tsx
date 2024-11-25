@@ -2,7 +2,6 @@ import { StrictMode } from "react";
 import ScopedCssBaseline from "@mui/material/ScopedCssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import "@fontsource/manrope/300.css";

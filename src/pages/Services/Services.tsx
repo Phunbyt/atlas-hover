@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Box, Container } from "@mui/material";
 import { VR_GIRL } from "../../assets";
 import PageHero from "../../components/PageHero/PageHero";

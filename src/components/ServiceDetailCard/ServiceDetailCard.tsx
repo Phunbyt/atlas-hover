@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
 import { appColors } from "../../constants/colors";
 import AnimatedImageCard from "../AnimatedImageCard/AnimatedImageCard";
 import List from "@mui/material/List";

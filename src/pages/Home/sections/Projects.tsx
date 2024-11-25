@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { appColors } from "../../../constants/colors";

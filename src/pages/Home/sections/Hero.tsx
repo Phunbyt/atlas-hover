@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { appColors } from "../../../constants/colors";
 import { GIRL_TOUCH, SVG_BACKGROUND } from "../../../assets";

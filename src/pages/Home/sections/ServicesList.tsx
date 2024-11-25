@@ -1,4 +1,3 @@
-import React from "react";
 import { appColors } from "../../../constants/colors";
 import ServiceCard from "../../../components/ServiceCard/ServiceCard";
 import CodeIcon from "@mui/icons-material/Code";

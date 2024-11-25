@@ -12,6 +12,13 @@ function ServiceDetailCard({
   cardImage,
   isReverse,
   linkId,
+}: {
+  mainText: string;
+  subText: string;
+  listTexts: string[];
+  cardImage: string;
+  isReverse: boolean;
+  linkId: string;
 }) {
   return (
     <Box

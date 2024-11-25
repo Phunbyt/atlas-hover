@@ -34,7 +34,7 @@ function Footer() {
   ];
   const navigate = useNavigate();
 
-  const handleServiceClick = (serviceId) => {
+  const handleServiceClick = (serviceId: string) => {
     navigate(`${serviceId}`);
   };
 

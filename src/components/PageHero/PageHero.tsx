@@ -1,7 +1,17 @@
 import { Box, Container, Typography } from "@mui/material";
 import { appColors } from "../../constants/colors";
 
-function PageHero({ heroImage, height = "45vh", mainText, subText }) {
+function PageHero({
+  heroImage,
+  height = "45vh",
+  mainText,
+  subText,
+}: {
+  heroImage: string;
+  height: string;
+  mainText: string;
+  subText: string;
+}) {
   const styles = {
     pageHeroContainer: {
       background: `linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(${heroImage})`,

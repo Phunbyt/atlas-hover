@@ -14,6 +14,12 @@ export default function ServiceCard({
   bodyText,
   backText,
   serviceLink,
+}: {
+  serviceIcon: any;
+  titletext: string;
+  bodyText: string;
+  backText: string;
+  serviceLink: string;
 }) {
   const [isFlipped, setIsFlipped] = React.useState(false);
 

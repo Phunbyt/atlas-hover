@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import "./animatedImageCard.css";
 
-function AnimatedImageCard({ imageLink }) {
+function AnimatedImageCard({ imageLink }: { imageLink: string }) {
   return (
     <Box
       sx={{

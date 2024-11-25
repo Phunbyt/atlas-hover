@@ -8,7 +8,7 @@ function PageHero({
   subText,
 }: {
   heroImage: string;
-  height: string | undefined;
+  height?: string;
   mainText: string;
   subText: string;
 }) {

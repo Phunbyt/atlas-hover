@@ -4,7 +4,7 @@ import { ROBOT_TOUCH } from "../../assets";
 import Who from "../../components/AboutCard/Who";
 import What from "../../components/AboutCard/What";
 import Why from "../../components/AboutCard/Why";
-import Team from "../../components/AboutCard/Team";
+// import Team from "../../components/AboutCard/Team";
 
 function About() {
   return (
@@ -22,7 +22,7 @@ function About() {
         <What />
         <Why />
       </Container>
-      <Team />
+      {/* <Team /> */}
 
       <Box
         sx={{

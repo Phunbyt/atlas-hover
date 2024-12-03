@@ -13,9 +13,6 @@ function Services() {
   useEffect(() => {
     const serviceId = location.hash.substring(1);
 
-    console.log(serviceId);
-    console.log("serviceId....");
-
     if (serviceId) {
       const serviceElement = document.getElementById(serviceId);
       if (serviceElement) {

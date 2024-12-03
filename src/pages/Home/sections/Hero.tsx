@@ -110,7 +110,7 @@ function Hero() {
                 maxWidth: 300,
               }}
             >
-              <CustomButton text={"Let’s Get You Started"} href={""} />
+              <CustomButton text={"Let’s Get You Started"} href={"/contact"} />
             </Box>
             <Grid container spacing={2}>
               <Grid size={6}>

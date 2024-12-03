@@ -2,7 +2,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { NavLink } from "react-router-dom";
 import Stack from "@mui/material/Stack";
-import { ATLASHOVER_LOGO } from "../../assets";
+import { ATLASHOVER_LOGO_TRIM } from "../../assets";
 import CustomButton from "../CustomButton/CustomButton";
 import LongMenu from "./Menu";
 import "./navbar.css";
@@ -29,18 +29,20 @@ function NavBar() {
         alignItems={"center"}
       >
         <Box>
-          <Box
-            component="img"
-            alt="Atlas logo"
-            sx={{
-              height: 100,
-              width: 200,
-              maxHeight: { xs: 233, md: 167 },
-              maxWidth: { xs: 350, md: 250 },
-              objectFit: "contain",
-            }}
-            src={ATLASHOVER_LOGO}
-          />
+          <NavLink to={"/"}>
+            <Box
+              component="img"
+              alt="Atlas logo"
+              sx={{
+                height: 100,
+                width: 200,
+                maxHeight: { xs: 233, md: 167 },
+                maxWidth: { xs: 350, md: 250 },
+                objectFit: "contain",
+              }}
+              src={ATLASHOVER_LOGO_TRIM}
+            />
+          </NavLink>
         </Box>
 
         <Box

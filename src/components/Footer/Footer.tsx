@@ -2,10 +2,10 @@ import {  Box, Container, Typography } from "@mui/material";
 import { appColors } from "../../constants/colors";
 import { ATLASHOVER_LOGO } from "../../assets";
 import { NavLink, useNavigate } from "react-router-dom";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from "@mui/icons-material/X";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import XIcon from "@mui/icons-material/X";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function Footer() {
   const companyLinks = [
@@ -26,11 +26,11 @@ function Footer() {
     { name: "Other computer related services", link: "/services#others" },
   ];
 
-  const socials = [
-    { icon: <FacebookIcon />, link: "#" },
-    { icon: <XIcon />, link: "#" },
-    { icon: <InstagramIcon />, link: "#" },
-    { icon: <LinkedInIcon />, link: "#" },
+  const socials: any = [
+    // { icon: <FacebookIcon />, link: "#" },
+    // { icon: <XIcon />, link: "#" },
+    // { icon: <InstagramIcon />, link: "#" },
+    // { icon: <LinkedInIcon />, link: "#" },
   ];
   const navigate = useNavigate();
 
@@ -105,6 +105,7 @@ function Footer() {
                   sx={{
                     marginTop: ".6rem",
                   }}
+                  onClick={() => handleServiceClick(item.link)}
                 >
                   <NavLink
                     style={{
@@ -189,7 +190,7 @@ function Footer() {
                 display: "flex",
               }}
             >
-              {socials.map((item) => (
+              {socials.map((item: any) => (
                 <Box>
                   <NavLink
                     style={{

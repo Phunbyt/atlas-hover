@@ -58,7 +58,7 @@ function AtlasIntelligence() {
           >
             <CustomButton
               text={"Partner with Us"}
-              href={"/projets"}
+              href={"/contact"}
               isPrimary={false}
             />
           </Box>

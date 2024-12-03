@@ -82,7 +82,7 @@ function Projects() {
               >
                 <CustomButton
                   text={"See Our Projects"}
-                  href={"/projets"}
+                  href={"/projects"}
                   isPrimary={false}
                 />
               </Box>

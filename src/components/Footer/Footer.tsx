@@ -1,4 +1,4 @@
-import {  Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { appColors } from "../../constants/colors";
 import { ATLASHOVER_LOGO } from "../../assets";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -175,14 +175,24 @@ function Footer() {
               </Typography>
             </Box>
             <Box>
-              <Typography
-                variant="body2"
-                fontWeight={"bold"}
-                color={appColors.BLACK}
-                margin={".5rem 0"}
+              <NavLink
+                style={{
+                  textDecoration: "none",
+                  color: appColors.BLACK,
+                  display: "flex",
+                  flexWrap: "wrap",
+                }}
+                to="mailto:info@atlashover.us"
               >
-                hello@atlashover.us
-              </Typography>
+                <Typography
+                  variant="body2"
+                  fontWeight={"bold"}
+                  color={appColors.BLACK}
+                  margin={".5rem 0"}
+                >
+                  info@atlashover.us
+                </Typography>
+              </NavLink>
             </Box>
 
             <Box

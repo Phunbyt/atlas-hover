@@ -1,7 +1,6 @@
 // import AWS from "aws-sdk";
 import SES from "aws-sdk/clients/sesv2";
 
-
 const secKey = "1+kJKlfZAXrWZCOGVqS3G4ULl05BJDr83gK071FL";
 const accKey = "AKIAWEFZ7EBX3EJXQHWK";
 
@@ -79,16 +78,30 @@ export const sendEmail = async ({
       phoneNumber,
       message,
     };
+    // const paramsm = {
+    //   Source: emailDestination,
+    //   Template: templateName,
+    //   Destination: {
+    //     ToAddresses: [emailDestination],
+    //   },
+    //   TemplateData: JSON.stringify(templateData),
+    // };
+
     const params = {
-      Source: emailDestination,
-      Template: templateName,
+      FromEmailAddress: "AtlasHover <info@atlashover.us>",
       Destination: {
         ToAddresses: [emailDestination],
       },
-      TemplateData: JSON.stringify(templateData),
+      Content: {
+        Template: {
+          TemplateName: templateName,
+          TemplateData: JSON.stringify(templateData),
+        },
+      },
+      // ConfigurationSetName: "ConfigSet",
     };
 
-    const data = await ses.sendTemplatedEmail(params).promise();
+    const data = await ses.sendEmail(params).promise();
 
     console.log(data);
     console.log("data.....");

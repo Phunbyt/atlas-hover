@@ -3,11 +3,11 @@ import AWS from "aws-sdk";
 const secKey = "1+kJKlfZAXrWZCOGVqS3G4ULl05BJDr83gK071FL";
 const accKey = "AKIAWEFZ7EBX3EJXQHWK";
 
-AWS.config.update({
-  region: "us-east-1",
-  accessKeyId: accKey,
-  secretAccessKey: secKey,
-});
+// AWS.config.update({
+//   region: "us-east-1",
+//   accessKeyId: accKey,
+//   secretAccessKey: secKey,
+// });
 
 // const ses = new AWS.SES();
 
@@ -58,7 +58,14 @@ export const sendEmail = async ({
   phoneNumber,
   message,
 }: any) => {
-  const ses = new AWS.SES();
+  // hey
+  const ses = new AWS.SES({
+    region: "us-east-1",
+    // here
+    accessKeyId: accKey,
+    secretAccessKey: secKey,
+  });
+  // blink
 
   try {
     const templateName = "Admin-Notification-3";

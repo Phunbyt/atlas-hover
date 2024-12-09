@@ -15,7 +15,7 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
-    outDir: "build",
+    outDir: "dist",
     // sourcemap: true,
     commonjsOptions: {
       include: [/node_modules/],

@@ -1,4 +1,6 @@
-import AWS from "aws-sdk";
+// import AWS from "aws-sdk";
+import SES from "aws-sdk/clients/sesv2";
+
 
 const secKey = "1+kJKlfZAXrWZCOGVqS3G4ULl05BJDr83gK071FL";
 const accKey = "AKIAWEFZ7EBX3EJXQHWK";
@@ -59,7 +61,7 @@ export const sendEmail = async ({
   message,
 }: any) => {
   // hey
-  const ses = new AWS.SES({
+  const ses = new SES({
     region: "us-east-1",
     // here
     accessKeyId: accKey,

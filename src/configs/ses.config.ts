@@ -15,11 +15,31 @@ export const testEmail = () => {
   try {
     const input = {
       Template: {
-        TemplateName: "Hello-test", // required
+        TemplateName: "Admin-Notification-3", // required
         SubjectPart: "New User Inquiry",
         TextPart: "My Test Text",
-        HtmlPart:
-          '<p>Hello Word</p>',
+        HtmlPart: `<div>
+  <div>
+    <h1>Hello, Admin</h1>
+  </div>
+  <div>
+    <p>You have a new message from:</p>
+  </div>
+  <div>
+    <div>
+        <p>Name: {{firstName}} {{lastName}}</p>
+    </div>
+    <div>
+        <h3>Contact Information</h3>
+        <p>Phone Number: {{phoneNumber}}</p>
+        <p>Email: {{email}}</p>
+    </div>
+    <div>
+        <h3>Inquiry Message</h3>
+        <p>{{message}}</p>
+    </div>
+  </div>
+</div>`,
       },
     };
     ses.createTemplate(input, (err, data) => {
@@ -31,18 +51,22 @@ export const testEmail = () => {
   }
 };
 
-export const sendEmail = async () => {
+export const sendEmail = async ({
+  firstName,
+  lastName,
+  email,
+  phoneNumber,
+  message,
+}: any) => {
   try {
-    const templateName = "Hello-test";
-      const emailDestination = "info@atlashover.us";
-      const emailSource ="roluwafunbi@gmail.com"
+    const templateName = "Admin-Notification-3";
+    const emailDestination = "info@atlashover.us";
     const templateData = {
-      firstName: "bench",
-      lastName: "mark",
-      email: emailDestination,
-      phoneNumber: "234567890",
-      message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolores assumenda, placeat et impedit debitis quas pariatur minus. Et, ea optio? Consequuntur veniam reprehenderit debitis itaque explicabo ab eius mollitia aut totam, incidunt laborum sed. Numquam dolorem facere repellendus velit itaque laborum fugit quos recusandae. Pariatur reiciendis hic accusantium quis.",
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      message,
     };
     const params = {
       Source: emailDestination,

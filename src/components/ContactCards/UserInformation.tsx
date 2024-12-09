@@ -1,7 +1,7 @@
 import { Box, TextField } from "@mui/material";
 import CustomButton from "../CustomButton/CustomButton";
 import { FLY_ENVELOPE } from "../../assets";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BasicModal from "../Modal/Modal";
 import { sendEmail } from "../../configs/ses.config";
 
@@ -13,8 +13,24 @@ function UserInformation() {
     phoneNumber: "",
     message: "",
   });
+  const [error, setError] = useState({
+    firstName: false,
+    lastName: false,
+    email: false,
+    phoneNumber: false,
+    message: false,
+  });
+
+  const fields: any = [
+    "firstName",
+    "lastName",
+    "email",
+    "phoneNumber",
+    "message",
+  ];
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(true);
   const [openModal, setOpenModal] = useState(false);
 
   const handleData = (field: any) => {
@@ -22,22 +38,67 @@ function UserInformation() {
       ...prevState, // keep the previous state values
       [field.target.name]: field.target.value, // update the specific field
     }));
+    setError((prevState) => ({
+      ...prevState, // keep the previous state values
+      [field.target.name]: false, // update the specific field
+    }));
   };
   const handleCloseModal = () => setOpenModal(false);
 
   const handleSubmit = () => {
     try {
       setIsLoading(true);
-      sendEmail();
+
+      fields.map((field: string) => {
+        const check = (data as any)[field];
+        if (check === "") {
+          setError((prevState) => ({ ...prevState, [field]: true }));
+        }
+      });
+
+      if (isError === false) {
+        setIsLoading(false);
+        setOpenModal(true);
+        sendEmail(data);
+        setData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+
+        return;
+      }
+      // testEmail();
       console.log(data);
       console.log("data....");
       setIsLoading(false);
-      setOpenModal(true);
     } catch (error) {
       console.log(error);
       console.log("error....... 55555");
     }
   };
+
+  useEffect(() => {
+    const isEmpty = fields.map((field: string) => {
+      const check = (data as any)[field];
+
+      console.log(check);
+      console.log("check....2");
+
+      return check;
+    });
+
+    if (isEmpty.some((val: boolean) => !val)) {
+      setIsError(true);
+    } else {
+      setIsError(false);
+    }
+
+    console.log(isEmpty);
+    console.log("isEmpty.....");
+  }, [data]);
 
   return (
     <Box
@@ -63,6 +124,7 @@ function UserInformation() {
             fullWidth
             name="firstName"
             value={data.firstName}
+            error={error.firstName}
             onChange={(e) => handleData(e)}
           />
         </Box>
@@ -73,6 +135,7 @@ function UserInformation() {
             label="Last Name"
             variant="standard"
             value={data.lastName}
+            error={error.lastName}
             name="lastName"
             onChange={(e) => handleData(e)}
           />
@@ -93,6 +156,7 @@ function UserInformation() {
             type="email"
             variant="standard"
             value={data.email}
+            error={error.email}
             name="email"
             onChange={(e) => handleData(e)}
           />
@@ -105,6 +169,7 @@ function UserInformation() {
             type="tel"
             variant="standard"
             value={data.phoneNumber}
+            error={error.phoneNumber}
             name="phoneNumber"
             onChange={(e) => handleData(e)}
           />
@@ -127,6 +192,7 @@ function UserInformation() {
             multiline
             rows={3}
             value={data.message}
+            error={error.message}
             name="message"
             onChange={(e) => handleData(e)}
           />

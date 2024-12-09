@@ -9,7 +9,7 @@ AWS.config.update({
   secretAccessKey: secKey,
 });
 
-const ses = new AWS.SES();
+// const ses = new AWS.SES();
 
 // export const testEmail = () => {
 //   try {

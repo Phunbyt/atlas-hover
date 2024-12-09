@@ -3,7 +3,7 @@ import CustomButton from "../CustomButton/CustomButton";
 import { FLY_ENVELOPE } from "../../assets";
 import { useEffect, useState } from "react";
 import BasicModal from "../Modal/Modal";
-// import { sendEmail } from "../../configs/ses.config";
+import { sendEmail } from "../../configs/ses.config";
 
 function UserInformation() {
   const [data, setData] = useState({
@@ -59,7 +59,7 @@ function UserInformation() {
       if (isError === false) {
         setIsLoading(false);
         setOpenModal(true);
-        // sendEmail(data);
+        sendEmail(data);
         setData({
           firstName: "",
           lastName: "",
@@ -71,8 +71,7 @@ function UserInformation() {
         return;
       }
       // testEmail();
-      console.log(data);
-      console.log("data....");
+
       setIsLoading(false);
     } catch (error) {
       console.log(error);
@@ -84,9 +83,6 @@ function UserInformation() {
     const isEmpty = fields.map((field: string) => {
       const check = (data as any)[field];
 
-      console.log(check);
-      console.log("check....2");
-
       return check;
     });
 
@@ -95,9 +91,6 @@ function UserInformation() {
     } else {
       setIsError(false);
     }
-
-    console.log(isEmpty);
-    console.log("isEmpty.....");
   }, [data]);
 
   return (

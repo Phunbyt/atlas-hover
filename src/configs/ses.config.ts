@@ -11,45 +11,45 @@ AWS.config.update({
 
 const ses = new AWS.SES();
 
-export const testEmail = () => {
-  try {
-    const input = {
-      Template: {
-        TemplateName: "Admin-Notification-3", // required
-        SubjectPart: "New User Inquiry",
-        TextPart: "My Test Text",
-        HtmlPart: `<div>
-  <div>
-    <h1>Hello, Admin</h1>
-  </div>
-  <div>
-    <p>You have a new message from:</p>
-  </div>
-  <div>
-    <div>
-        <p>Name: {{firstName}} {{lastName}}</p>
-    </div>
-    <div>
-        <h3>Contact Information</h3>
-        <p>Phone Number: {{phoneNumber}}</p>
-        <p>Email: {{email}}</p>
-    </div>
-    <div>
-        <h3>Inquiry Message</h3>
-        <p>{{message}}</p>
-    </div>
-  </div>
-</div>`,
-      },
-    };
-    ses.createTemplate(input, (err, data) => {
-      console.log({ err, data });
-    });
-  } catch (error) {
-    console.log(error);
-    console.log("error......");
-  }
-};
+// export const testEmail = () => {
+//   try {
+//     const input = {
+//       Template: {
+//         TemplateName: "Admin-Notification-3", // required
+//         SubjectPart: "New User Inquiry",
+//         TextPart: "My Test Text",
+//         HtmlPart: `<div>
+//   <div>
+//     <h1>Hello, Admin</h1>
+//   </div>
+//   <div>
+//     <p>You have a new message from:</p>
+//   </div>
+//   <div>
+//     <div>
+//         <p>Name: {{firstName}} {{lastName}}</p>
+//     </div>
+//     <div>
+//         <h3>Contact Information</h3>
+//         <p>Phone Number: {{phoneNumber}}</p>
+//         <p>Email: {{email}}</p>
+//     </div>
+//     <div>
+//         <h3>Inquiry Message</h3>
+//         <p>{{message}}</p>
+//     </div>
+//   </div>
+// </div>`,
+//       },
+//     };
+//     ses.createTemplate(input, (err, data) => {
+//       console.log({ err, data });
+//     });
+//   } catch (error) {
+//     console.log(error);
+//     console.log("error......");
+//   }
+// };
 
 export const sendEmail = async ({
   firstName,
@@ -58,6 +58,8 @@ export const sendEmail = async ({
   phoneNumber,
   message,
 }: any) => {
+  const ses = new AWS.SES();
+
   try {
     const templateName = "Admin-Notification-3";
     const emailDestination = "info@atlashover.us";

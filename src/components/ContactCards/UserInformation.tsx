@@ -3,7 +3,7 @@ import CustomButton from "../CustomButton/CustomButton";
 import { FLY_ENVELOPE } from "../../assets";
 import { useEffect, useState } from "react";
 import BasicModal from "../Modal/Modal";
-import { sendEmail } from "../../configs/ses.config";
+// import { sendEmail } from "../../configs/ses.config";
 
 function UserInformation() {
   const [data, setData] = useState({
@@ -59,7 +59,7 @@ function UserInformation() {
       if (isError === false) {
         setIsLoading(false);
         setOpenModal(true);
-        sendEmail(data);
+        // sendEmail(data);
         setData({
           firstName: "",
           lastName: "",

@@ -5,7 +5,6 @@ import MemoryIcon from "@mui/icons-material/Memory";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
-import BackHandIcon from "@mui/icons-material/BackHand";
 import ViewInArIcon from "@mui/icons-material/ViewInAr";
 import Grid from "@mui/material/Grid2";
 import { Box, Container, Typography } from "@mui/material";

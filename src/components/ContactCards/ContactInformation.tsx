@@ -14,8 +14,8 @@ function ContactInformation() {
     },
     {
       icon: <EmailIcon />,
-      link: "mailto:ademola@atlashover.us",
-      text: "ademola@atlashover.us",
+      link: "mailto:info@atlashover.us",
+      text: "info@atlashover.us",
     },
     {
       icon: <PlaceIcon />,

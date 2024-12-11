@@ -19,8 +19,8 @@ function ContactInformation() {
     },
     {
       icon: <PlaceIcon />,
-      link: "https://maps.google.com/?q=9537 Georgian Way Owings Mills MD 21117",
-      text: "9537 Georgian Way Owings Mills MD 21117",
+      link: "https://maps.google.com/?q=maryland usa",
+      text: "Maryland USA",
     },
   ];
 

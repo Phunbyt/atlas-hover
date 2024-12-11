@@ -56,15 +56,15 @@ function ServicesList() {
         "In our approach to General Management Consulting, we take a comprehensive, holistic view to support agency leadership in making well-informed, strategic decisions. We deliver actionable insights and data-driven recommendations across a range of critical areas",
       serviceLink: "/services#manage",
     },
-    {
-      serviceIcon: <BackHandIcon />,
-      titletext: "Janitorial Services",
-      bodyText:
-        "Feel secure in the knowledge that we do our part for the environment we love",
-      backText:
-        "At Atlashover, we're dedicated to delivering exceptional commercial janitorial services that exceed our clients' expectations. Our winning team of experienced janitors shares our commitment to unwavering work ethic",
-      serviceLink: "/services#janitor",
-    },
+    // {
+    //   serviceIcon: <BackHandIcon />,
+    //   titletext: "Janitorial Services",
+    //   bodyText:
+    //     "Feel secure in the knowledge that we do our part for the environment we love",
+    //   backText:
+    //     "At Atlashover, we're dedicated to delivering exceptional commercial janitorial services that exceed our clients' expectations. Our winning team of experienced janitors shares our commitment to unwavering work ethic",
+    //   serviceLink: "/services#janitor",
+    // },
     {
       serviceIcon: <ViewInArIcon />,
       titletext: "Other Computer Related Rervices",

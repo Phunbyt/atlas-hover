@@ -14,6 +14,10 @@ export const serviceListArray = [
     subText:
       "At AtlasHover, we specialize in delivering bespoke software solutions that perfectly align with your unique business requirements. Our team of skilled programmers leverages the latest tools and frameworks to craft robust, scalable, and high-performance software applications.",
     listTexts: [
+      "Tech Support",
+      "DevSecOps",
+      "ServiceNow",
+      "Sales force",
       "Customized software development",
       "Agile project management",
       "On-time delivery",
@@ -28,6 +32,9 @@ export const serviceListArray = [
     subText:
       "We partner with OEMs and ISVs to deliver comprehensive computer system design and engineering services. Our seasoned design engineers leverage years of hardware platform expertise  to craft high-performance solutions that drive business success.",
     listTexts: [
+      "Data Analysis",
+      "Azure",
+      "AWS",
       "Accelerate product development",
       "Reduce costs and risks",
       "Enhance system performance and reliability",
@@ -80,20 +87,6 @@ export const serviceListArray = [
     linkId: "admin",
   },
   {
-    mainText: "Janitorial Services",
-    subText:
-      "At Atlashover, we're dedicated to delivering exceptional commercial janitorial services that exceed our clients' expectations. Our winning team of experienced janitors shares our commitment to unwavering work ethic and unmatched customer service. With a focus on quality, reliability, and attention to detail, we ensure a cleaner, healthier environment for your business.",
-    listTexts: [
-      "A foundation of hard work and dedication",
-      "A passion for customer satisfaction",
-      "A team of skilled janitors",
-      "A commitment to quality and excellence",
-    ],
-    cardImage: JANITOR,
-    isReverse: true,
-    linkId: "janitor",
-  },
-  {
     mainText: "Other Computer Related Services",
     subText:
       "At AtlasHover, we understand that every business has unique computer needs. That's why we offer comprehensive support and solutions beyond our listed services. Our expert team is dedicated to addressing all your computer-related problems, providing personalized support, and delivering tailored solutions to drive your business forward.",
@@ -104,7 +97,21 @@ export const serviceListArray = [
       "Proactive IT management",
     ],
     cardImage: DESK,
-    isReverse: false,
+    isReverse: true,
     linkId: "others",
+  },
+  {
+    mainText: "Janitorial Services",
+    subText:
+      "At Atlashover, we're dedicated to delivering exceptional commercial janitorial services that exceed our clients' expectations. Our winning team of experienced janitors shares our commitment to unwavering work ethic and unmatched customer service. With a focus on quality, reliability, and attention to detail, we ensure a cleaner, healthier environment for your business.",
+    listTexts: [
+      "A foundation of hard work and dedication",
+      "A passion for customer satisfaction",
+      "A team of skilled janitors",
+      "A commitment to quality and excellence",
+    ],
+    cardImage: JANITOR,
+    isReverse: false,
+    linkId: "janitor",
   },
 ];

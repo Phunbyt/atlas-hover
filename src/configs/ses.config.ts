@@ -12,45 +12,49 @@ const accKey = "AKIAWEFZ7EBX3EJXQHWK";
 
 // const ses = new AWS.SES();
 
-// export const testEmail = () => {
-//   try {
-//     const input = {
-//       Template: {
-//         TemplateName: "Admin-Notification-3", // required
-//         SubjectPart: "New User Inquiry",
-//         TextPart: "My Test Text",
-//         HtmlPart: `<div>
-//   <div>
-//     <h1>Hello, Admin</h1>
-//   </div>
-//   <div>
-//     <p>You have a new message from:</p>
-//   </div>
-//   <div>
-//     <div>
-//         <p>Name: {{firstName}} {{lastName}}</p>
-//     </div>
-//     <div>
-//         <h3>Contact Information</h3>
-//         <p>Phone Number: {{phoneNumber}}</p>
-//         <p>Email: {{email}}</p>
-//     </div>
-//     <div>
-//         <h3>Inquiry Message</h3>
-//         <p>{{message}}</p>
-//     </div>
-//   </div>
-// </div>`,
-//       },
-//     };
-//     ses.createTemplate(input, (err, data) => {
-//       console.log({ err, data });
-//     });
-//   } catch (error) {
-//     console.log(error);
-//     console.log("error......");
-//   }
-// };
+export const testEmail = () => {
+  const ses = new SES({
+    region: "us-east-1",
+    // here
+    accessKeyId: accKey,
+    secretAccessKey: secKey,
+  });
+  try {
+    const input = {
+      TemplateName: "User-Notification", // required
+      TemplateContent: {
+        Subject: "AtlasHover",
+        Text: "Hello From AtlasHover",
+        Html: `
+        <div>
+  <div>
+    <h1>Hello, {{firstName}}</h1>
+  </div>
+  <div>
+    <p>Thank you for contacting AtlasHover</p>
+  </div>
+  <div>
+    <p>We have received your message and will reach out to you shortly</p>
+  </div>
+  <br />
+  <br />
+  <div>
+    <p>Warm Regards</p>
+    <p>The AtlasHover Team</p>
+  </div>
+</div>
+
+`,
+      },
+    };
+    ses.createEmailTemplate(input, (err, data) => {
+      console.log({ err, data });
+    });
+  } catch (error) {
+    console.log(error);
+    console.log("error......");
+  }
+};
 
 export const sendEmail = async ({
   firstName,
@@ -78,14 +82,6 @@ export const sendEmail = async ({
       phoneNumber,
       message,
     };
-    // const paramsm = {
-    //   Source: emailDestination,
-    //   Template: templateName,
-    //   Destination: {
-    //     ToAddresses: [emailDestination],
-    //   },
-    //   TemplateData: JSON.stringify(templateData),
-    // };
 
     const params = {
       FromEmailAddress: "AtlasHover <info@atlashover.us>",
@@ -108,5 +104,48 @@ export const sendEmail = async ({
   } catch (error) {
     console.log(error);
     console.log("error......");
+  }
+};
+
+export const sendUserEmail = async ({
+  firstName,
+  email,
+}: any) => {
+  // hey
+  const ses = new SES({
+    region: "us-east-1",
+    // here
+    accessKeyId: accKey,
+    secretAccessKey: secKey,
+  });
+  // blink
+
+  try {
+    const templateName = "User-Notification";
+    const emailDestination = email;
+    const templateData = {
+      firstName,
+    };
+
+    const params = {
+      FromEmailAddress: "AtlasHover <info@atlashover.us>",
+      Destination: {
+        ToAddresses: [emailDestination],
+      },
+      Content: {
+        Template: {
+          TemplateName: templateName,
+          TemplateData: JSON.stringify(templateData),
+        },
+      },
+    };
+
+    const data = await ses.sendEmail(params).promise();
+
+    console.log(data);
+    console.log("data.....sendUserEmail");
+  } catch (error) {
+    console.log(error);
+    console.log("error......sendUserEmail");
   }
 };

@@ -34,6 +34,7 @@ function ContactInformation() {
         width: "100%",
         padding: "2rem",
         borderRadius: "1rem",
+        minWidth: 200,
       }}
     >
       <Box

@@ -101,6 +101,7 @@ function UserInformation() {
         maxWidth: 650,
         width: "100%",
         padding: "2rem",
+        minWidth: 200,
       }}
     >
       <Box

@@ -7,11 +7,11 @@ import { NavLink } from "react-router-dom";
 
 function ContactInformation() {
   const contactInfo = [
-    {
-      icon: <AddIcCallIcon />,
-      link: "tel:+13474316492",
-      text: "+1 (347) 431-6492",
-    },
+    // {
+    //   icon: <AddIcCallIcon />,
+    //   link: "tel:+13474316492",
+    //   text: "+1 (347) 431-6492",
+    // },
     {
       icon: <EmailIcon />,
       link: "mailto:info@atlashover.us",

@@ -49,7 +49,7 @@ function Hero() {
             Transform your business with results-driven IT consulting solutions
             tailored to every industry. We empower you to unlock your full
             potential, achieve unparalleled success, and propel your
-            organization toward a brighter future.
+            organization towards a brighter future.
           </Typography>
         </Box>
       </Container>
@@ -116,7 +116,7 @@ function Hero() {
               <Grid size={6}>
                 <HeroCard
                   mainText={"100%"}
-                  subText={"Clients and partners satisfaction guaranteed"}
+                  subText={"Clients and partners' satisfaction guaranteed"}
                   mainTextColor={appColors.WHITE}
                   subTextColor={appColors.WHITE}
                   backgroundColor={appColors.PRIMARY}

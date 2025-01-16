@@ -66,9 +66,9 @@ function ServicesList() {
     // },
     {
       serviceIcon: <ViewInArIcon />,
-      titletext: "Other Computer Related Rervices",
+      titletext: "Other Computer-Related Services",
       bodyText:
-        "Your all in one solution for all things technology and innovation",
+        "Your all-in-one solution for all things technology and innovation",
       backText:
         "At AtlasHover, we understand that every business has unique computer needs. That's why we offer comprehensive support and solutions beyond our listed services.",
       serviceLink: "/services#others",
